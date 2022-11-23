@@ -1,0 +1,15 @@
+services:
+  
+  salt-master:
+    image:  localhost/mehhlol/salt-master:latest
+    container_name: salt-master
+    build:
+      context: ./master
+  
+  salt-minion:
+    image:  localhost/mehhlol/salt-minion:latest
+    container_name: salt-minion
+    build:
+      context: ./minion
+    depends_on:
+      - salt-master
