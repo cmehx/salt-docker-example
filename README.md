@@ -1,7 +1,6 @@
 # Project Goal
 
-Student project to learn how to deploy a salt manager and its minions using
-docker containers with podman and podman-compose
+Student example on how to deploy a Salt master/minion on docker containers.
 
 # Requirements
 
@@ -22,16 +21,24 @@ Line 16 minion/Containerfile
 # Deploying Salt Master and Minion on containers
 
 #### Launch a Master and a Minion containers using podman-compose
-- podman-compose up
+```
+podman-compose up
+```
 
 #### Example with -f to specify a file entry / -d for background execution mode
-- podman-compose -f compose.yaml up -d
+```
+podman-compose -f compose.yaml up -d
+```
 
 #### To enter a container in bash mode
-- docker-compose exec <container_name> bash
+```
+docker-compose exec <container_name> bash
+```
 
 #### To enter salt-master in bash mode
-- docker-compose exec salt-master bash
+```
+docker-compose exec salt-master bash
+```
 
 ## Usage Example
 
